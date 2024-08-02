@@ -1,0 +1,62 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.SanPhamVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "DeleteSP";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>XÓA SẢN PHẨM</h3>
+
+<h4>Bạn có chắc muốn xóa sản phẩm này không?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SanPhamID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPhamID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteSP", "QLSanPhamAdmin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-xs btn-danger" style="margin-right:20px">
+                <i class="fa fa-trash"></i> Xóa
+            </button>
+            <a href="@Url.Action("Index", "QLSanPhamAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+                <i class="fa fa-arrow-left"></i> Quay về
+            </a>
+        </div>
+    }
+</div>

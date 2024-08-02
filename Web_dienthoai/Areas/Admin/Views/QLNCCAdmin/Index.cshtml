@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.NccVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h3 style="color:#0094ff">QUẢN LÝ NHÀ CUNG CẤP</h3>
+<h4>Tổng nhà cung cấp hiện có là: <strong>@ViewBag.message</strong></h4>
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        <p>
+            <a href="@Url.Action("AddNcc", "QLNCCAdmin")" class="btn btn-xs btn-primary">
+                <i class="fa fa-plus"></i> Thêm mới
+            </a>
+        </p>
+    </div>
+    <div class="col-md-6">
+        @using (Html.BeginForm("Index", "QLNCCAdmin", FormMethod.Get)) // Sử dụng FormMethod.Get để giữ lại giá trị tìm kiếm trên thanh địa chỉ
+        {
+            <div class="input-group mb-3">
+                @* Sử dụng lớp Bootstrap cho input group *@
+                @Html.TextBox("search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm kiếm bởi Tên, Địa chỉ, Sđt, Email" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary " type="submit">
+                        <i class="fa fa-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Mã NCC", "Index", new { sort = ViewBag.MaNccSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tên nhà cung cấp", "Index", new { sort = ViewBag.TenNccSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Địa chỉ", "Index", new { sort = ViewBag.DiaChiSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Số điện thoại", "Index", new { sort = ViewBag.SdtSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Email", "Index", new { sort = ViewBag.EmailSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaCungCapID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNhaCungCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDienThoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td style="width:15%">
+                <a href="@Url.Action("DetailNcc", new { id = item.NhaCungCapID })" class="btn btn-xs btn-info" title="Chi tiết">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+                <a href="@Url.Action("EditNcc", new { id = item.NhaCungCapID })" class="btn btn-xs btn-warning" title="Sửa">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="@Url.Action("DeleteNcc", new { id = item.NhaCungCapID })" class="btn btn-xs btn-danger" title="Xóa">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

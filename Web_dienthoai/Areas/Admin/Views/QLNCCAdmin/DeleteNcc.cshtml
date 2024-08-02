@@ -1,0 +1,64 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.NccVM
+
+@{
+    ViewBag.Title = "DeleteNcc";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<h3>XÓA NHÀ CUNG CẤP</h3>
+
+<h4>Bạn có chắc muốn xóa nhà cung cấp này không?</h4>
+<div>
+    <h4>NccVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaCungCapID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCapID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNhaCungCap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNhaCungCap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteNcc", "QLNCCAdmin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-xs btn-danger" style="margin-right:20px">
+                <i class="fa fa-trash"></i> Xóa
+            </button>
+            <a href="@Url.Action("Index", "QLNCCAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+                <i class="fa fa-arrow-left"></i> Quay về
+            </a>
+        </div>
+    }
+</div>

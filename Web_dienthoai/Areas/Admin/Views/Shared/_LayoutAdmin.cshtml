@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title - Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="" href="#" style="padding:10px; font-weight:bold; font-size:1.3em; color:navajowhite;">
+            <img src="~/Images/bookshop.png" height="50" alt="Bookshop" class="d-inline-block align-text-cen rounded-circle">
+            Page Admin
+        </div>
+        <a href="@Url.Action("Index", "DefaultAdmin")"><i class="fas fa-tachometer-alt"></i> Trang chủ</a>
+        <a href="@Url.Action("Index", "QLSanPhamAdmin")"><i class="fas fa-box-open"></i> Sản phẩm</a>
+        <a href="@Url.Action("Index", "QLNCCAdmin")"><i class="fas fa-truck"></i> Nhà cung cấp</a>
+        <a href="@Url.Action("Index", "QLAccountAdmin")"><i class="fas fa-user"></i> Tài khoản</a>
+        <a href="@Url.Action("Index", "QLDonHangAdmin")"><i class="fas fa-receipt"></i> Đơn hàng</a>
+        <a href="@Url.Action("Index", "QLThongKeAdmin")"><i class="fas fa-chart-line"></i> Thống kê</a>
+    </div>
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Xin chào>> @Session["Email"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Account")">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <section class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

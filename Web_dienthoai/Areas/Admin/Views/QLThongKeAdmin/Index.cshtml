@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "RevenueByDateRange";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<h3>Thống kê</h3>
+
+<div style="display: flex; justify-content: space-between;">
+    <canvas id="myChart" style="width:45%;max-width:500px"></canvas>
+    <canvas id="topSellingProductsChart" style="width:45%;max-width:500px"></canvas>
+</div>
+
+@section Scripts {
+    <script>
+        const xValues = @Html.Raw(Json.Encode(ViewBag.Labels));
+        const yValues = @Html.Raw(Json.Encode(ViewBag.Values));
+        const barColors = ["red", "green", "blue", "orange", "brown", "red", "green", "blue", "orange", "brown", "red", "green"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Doanh thu theo tháng trong năm 2024",
+                    fontSize: 20,
+
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Biểu đồ top 5 sản phẩm bán chạy
+        const topSellingProductsLabels = @Html.Raw(ViewBag.TopSellingProductsLabels);
+        const topSellingProductsValues = @Html.Raw(ViewBag.TopSellingProductsValues);
+        const topSellingColors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"];
+
+        new Chart("topSellingProductsChart", {
+            type: "horizontalBar",
+            data: {
+                labels: topSellingProductsLabels,
+                datasets: [{
+                    backgroundColor: topSellingColors,
+                    data: topSellingProductsValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Top 5 sản phẩm bán chạy trong tháng",
+                    fontSize: 20,
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}

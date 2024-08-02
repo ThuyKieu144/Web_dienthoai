@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.SPDisplayVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h3 style="color:#0094ff">QUẢN LÝ DANH MỤC SẢN PHẨM</h3>
+<h4>Tổng sản phẩm hiện có là: <strong>@ViewBag.message</strong></h4>
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        <p>
+            <a href="@Url.Action("AddSP", "QLSanPhamAdmin")" class="btn btn-xs btn-primary">
+                <i class="fa fa-plus"></i> Thêm mới
+            </a>
+        </p>
+    </div>
+    <div class="col-md-6">
+        @using (Html.BeginForm("Index", "QLSanPhamAdmin", FormMethod.Get)) // Sử dụng FormMethod.Get để giữ lại giá trị tìm kiếm trên thanh địa chỉ
+        {
+            <div class="input-group mb-3">
+                @* Sử dụng lớp Bootstrap cho input group *@
+                @Html.TextBox("search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm kiếm bởi Tên, Giá, Số lượng, Tên NCC" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary " type="submit">
+                        <i class="fa fa-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Mã SP", "Index", new { sort = ViewBag.MaSPSort }, new { @class = "sortable-column-link" })
+            @*@Html.DisplayNameFor(model => model.MaSP)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TenSP)*@
+            @Html.ActionLink("Tên SP", "Index", new { sort = ViewBag.TenSPSort }, new { @class = "sortable-column-link" })
+
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Gia)*@
+            @Html.ActionLink("Giá SP", "Index", new { sort = ViewBag.GiaSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.SoLuongTon)*@
+            @Html.ActionLink("Số lượng", "Index", new { sort = ViewBag.SoLuongTonSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TenNCC)*@
+            @Html.ActionLink("Tên Nhà Cung Cấp", "Index", new { sort = ViewBag.TenNCCSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongTon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNCC)
+            </td>
+            <td>
+                <img src="~/Images/Image_Books/@item.HinhAnh" height="100" />
+            </td>
+            <td style="width:15%">
+                <a href="@Url.Action("DetailSP", new { id = item.MaSP })" class="btn btn-xs btn-info" title="Chi tiết">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+                <a href="@Url.Action("EditSP", new { id = item.MaSP })" class="btn btn-xs btn-warning" title="Sửa">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="@Url.Action("DeleteSP", new { id = item.MaSP })" class="btn btn-xs btn-danger" title="Xóa">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

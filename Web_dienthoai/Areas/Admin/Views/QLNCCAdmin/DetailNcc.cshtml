@@ -1,0 +1,65 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.NccVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "DetailNcc";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>CHI TIẾT NHÀ CUNG CẤP</h3>
+<p>
+    <a href="@Url.Action("Index", "QLNCCAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+        <i class="fa fa-arrow-left"></i> Quay về
+    </a>
+    <a href="@Url.Action("EditNcc", new { id = Model.NhaCungCapID })" style="margin-left:20px" class="btn btn-xs btn-warning" title="Quay về">
+        <i class="fa fa-edit"></i> Chỉnh sửa
+    </a>
+
+</p>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaCungCapID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCapID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNhaCungCap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNhaCungCap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+

@@ -1,0 +1,53 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.AccountVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "DetailAccount";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>CHI TIẾT TÀI KHOẢN</h3>
+<p>
+    <a href="@Url.Action("Index", "QLAccountAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+        <i class="fa fa-arrow-left"></i> Quay về
+    </a>
+    <a href="@Url.Action("EditAccount", new { id = Model.AccountID })" style="margin-left:20px" class="btn btn-xs btn-warning" title="Chỉnh sửa">
+        <i class="fa fa-edit"></i> Chỉnh sửa
+    </a>
+</p>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+    </dl>
+</div>

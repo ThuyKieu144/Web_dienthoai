@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.AccountVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="color:#0094ff">QUẢN LÝ TÀI KHOẢN</h3>
+<h4>Tổng số tài khoản hiện có là: <strong>@ViewBag.message</strong></h4>
+
+<div class="btn-group d-flex w-100 mb-3" role="group">
+    <a href="@Url.Action("Index", "QLAccountAdmin")" id="btnAdd" class="btn btn-primary flex-fill">
+        <i class="fa fa-exchange"></i> Quản lý tài khoản
+    </a>
+    <a href="@Url.Action("IndexKH", "QLAccountAdmin")" id="btnAnother" class="btn btn-outline-primary flex-fill">
+        <i class="fa fa-exchange"></i> Quản lý khách hàng
+    </a>
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        <p>
+            <a href="@Url.Action("AddAccount", "QLAccountAdmin")" class="btn btn-xs btn-primary">
+                <i class="fa fa-plus"></i> Thêm mới
+            </a>
+        </p>
+    </div>
+    <div class="col-md-6">
+        @using (Html.BeginForm("Index", "QLAccountAdmin", FormMethod.Get))
+        {
+            <div class="input-group mb-3">
+                @Html.TextBox("search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm kiếm bởi Tên người dùng, Email, Vai trò" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Mã tài khoản", "Index", new { sort = ViewBag.MaAccSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tên người dùng", "Index", new { sort = ViewBag.UsernameSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Email", "Index", new { sort = ViewBag.EmailSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Vai trò", "Index", new { sort = ViewBag.RoleSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td style="width:15%">
+                <a href="@Url.Action("DetailAccount", new { id = item.AccountID })" class="btn btn-xs btn-info" title="Chi tiết">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+                <a href="@Url.Action("EditAccount", new { id = item.AccountID })" class="btn btn-xs btn-warning" title="Sửa">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a href="@Url.Action("DeleteAccount", new { id = item.AccountID })" class="btn btn-xs btn-danger" title="Xóa">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+

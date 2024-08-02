@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Tổng Sản Phẩm</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongSanPham</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Tổng Tài Khoản</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongTaiKhoan</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-header">Tổng Doanh Thu</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongDoanhThu</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Tổng Đơn Hàng</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TongDonHang</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+    <canvas id="myChart" style="width:45%;max-width:500px"></canvas>
+    <canvas id="topSellingProductsChart" style="width:45%;max-width:500px"></canvas>
+</div>
+
+@section Scripts {
+    <script>
+        const xValues = @Html.Raw(Json.Encode(ViewBag.Labels));
+        const yValues = @Html.Raw(Json.Encode(ViewBag.Values));
+        const barColors = ["red", "green", "blue", "orange", "brown", "red", "green", "blue", "orange", "brown", "red", "green"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Doanh thu theo tháng trong năm 2024",
+                    fontSize: 20,
+
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        //Biểu đồ top 5 sản phẩm bán chạy
+        const topSellingProductsLabels = @Html.Raw(ViewBag.TopSellingProductsLabels);
+        const topSellingProductsValues = @Html.Raw(ViewBag.TopSellingProductsValues);
+        const topSellingColors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"];
+
+        new Chart("topSellingProductsChart", {
+            type: "horizontalBar",
+            data: {
+                labels: topSellingProductsLabels,
+                datasets: [{
+                    backgroundColor: topSellingColors,
+                    data: topSellingProductsValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Top 5 sản phẩm bán chạy trong tháng",
+                    fontSize: 20,
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}
+@*<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>*@
+
+

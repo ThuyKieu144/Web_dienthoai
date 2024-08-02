@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.DHDisplayVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="color:#0094ff">QUẢN LÝ ĐƠN HÀNG</h3>
+<h4>Tổng số đơn hàng hiện có là: <strong>@ViewBag.message</strong></h4>
+
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Index", "QLDonHangAdmin", FormMethod.Get))
+        {
+            <div class="input-group mb-3">
+                @Html.TextBox("search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm kiếm..." })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Mã đơn hàng", "Index", new { sort = ViewBag.MaDHSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Ngày đặt", "Index", new { sort = ViewBag.NgayDatSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tên khách hàng", "Index", new { sort = ViewBag.TenKHSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Địa chỉ", "Index", new { sort = ViewBag.DiaChiSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Số điện thoại", "Index", new { sort = ViewBag.SDTSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tổng tiền", "Index", new { sort = ViewBag.TongTienSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tình trạng", "Index", new { sort = ViewBag.TinhTrangSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonHangID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKhachHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDienThoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongTien) đ
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td style="width:10%">
+                <a href="@Url.Action("DetailDH", new { id = item.DonHangID })" class="btn btn-xs btn-info" title="Chi tiết">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+
+            </td>
+        </tr>
+    }
+
+</table>

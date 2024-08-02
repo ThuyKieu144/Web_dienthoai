@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.CTDonHangVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "DetailDH";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var trangThaiID = ViewBag.TrangThaiID;
+}
+
+<h3>Chi tiết đơn hàng</h3>
+
+<p>
+    <a href="@Url.Action("Index", "QLDonHangAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+        <i class="fa fa-arrow-left"></i> Quay về
+    </a>
+</p>
+
+<!-- Debug information -->
+<p>Trạng thái đơn hàng là: @Model.First().TrangThaiName</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STT</th> <!-- Auto-incrementing row number -->
+                @*<th>@Html.DisplayNameFor(model => model.First().MaCTDH)</th>*@
+                <th>@Html.DisplayNameFor(model => model.First().TenSP)</th>
+                <th>@Html.DisplayNameFor(model => model.First().HinhAnh)</th>
+                <th>@Html.DisplayNameFor(model => model.First().SoLuong)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Gia)</th>
+                <th>@Html.DisplayNameFor(model => model.First().TongTien)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int counter = 1;
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@counter</td>
+                    @*<td>@Html.DisplayFor(modelItem => item.MaCTDH)</td>*@
+                    <td>@Html.DisplayFor(modelItem => item.TenSP)</td>
+                    <td><img src="~/Images/Image_Books/@item.HinhAnh" height="100" /></td>
+                    <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Gia)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TongTien)</td>
+                </tr>
+
+                counter++;
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>Thành tiền</strong></td>
+                <td><strong>@Model.First().ThanhTien đ</strong></td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Không có chi tiết đơn hàng nào để hiển thị.</p>
+}
+
+@if (trangThaiID == 1)
+{
+    <div class="form-group text-center d-flex justify-content-center" style="margin-top:30px">
+        <a href="@Url.Action("CheckDH", "QLDonHangAdmin", new { id = Model.First().MaCTDH })" style="margin-left:20px" class="btn btn-xs btn-success" title="Đã giao">
+            <i class="fa fa-check"></i> Đã giao
+        </a>
+        <a href="@Url.Action("CancelDH", "QLDonHangAdmin", new { id = Model.First().MaCTDH })" style="margin-left:20px" class="btn btn-xs btn-danger" title="Hủy">
+            <i class="fa fa-times"></i> Hủy
+        </a>
+    </div>
+}

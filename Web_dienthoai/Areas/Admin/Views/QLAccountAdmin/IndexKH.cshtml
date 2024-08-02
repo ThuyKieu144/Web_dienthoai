@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Web_dienthoai.Areas.Admin.Data.KhachHangVM>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="color:#0094ff">QUẢN LÝ KHÁCH HÀNG</h3>
+<h4>Tổng số khách hàng hiện có là: <strong>@ViewBag.message</strong></h4>
+
+<div class="btn-group d-flex w-100 mb-3" role="group">
+    <a href="@Url.Action("Index", "QLAccountAdmin")" id="btnAdd" class="btn btn-outline-primary flex-fill">
+        <i class="fa fa-exchange"></i> Quản lý tài khoản
+    </a>
+    <a href="@Url.Action("IndexKH", "QLAccountAdmin")" id="btnAnother" class="btn btn-primary flex-fill">
+        <i class="fa fa-exchange"></i> Quản lý khách hàng
+    </a>
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="col-md-6">
+        @using (Html.BeginForm("IndexKH", "QLAccountAdmin", FormMethod.Get))
+        {
+            <div class="input-group mb-3">
+                @Html.TextBox("search", ViewBag.Search as string, new { @class = "form-control", placeholder = "Tìm kiếm bởi Tên, Email, Địa chỉ, SDT" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("#", "IndexKH", new { sort = ViewBag.MaKhachHangSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Tên khách hàng", "IndexKH", new { sort = ViewBag.TenKhachHangSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Email", "IndexKH", new { sort = ViewBag.EmailKHSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Địa chỉ", "IndexKH", new { sort = ViewBag.DiaChiKHSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th>
+            @Html.ActionLink("Số điện thoại", "IndexKH", new { sort = ViewBag.SdtSort }, new { @class = "sortable-column-link" })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KhachHangID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKhachHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDienThoai)
+            </td>
+
+        </tr>
+    }
+</table>
+

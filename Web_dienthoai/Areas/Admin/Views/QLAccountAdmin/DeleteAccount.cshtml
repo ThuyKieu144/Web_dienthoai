@@ -1,0 +1,64 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.AccountVM
+
+@{
+    ViewBag.Title = "DeleteAccount";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h3>XÓA TÀI KHOẢN</h3>
+
+<h4>Bạn có chắc muốn xóa tài khoản này không?</h4>
+<div>
+    <h4>AccountVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("DeleteAccount", "QLAccountAdmin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-xs btn-danger" style="margin-right:20px">
+                <i class="fa fa-trash"></i> Xóa
+            </button>
+            <a href="@Url.Action("Index", "QLAccountAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+                <i class="fa fa-arrow-left"></i> Quay về
+            </a>
+        </div>
+    }
+</div>
+
+

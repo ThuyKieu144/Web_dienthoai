@@ -1,0 +1,81 @@
+﻿@model Web_dienthoai.Areas.Admin.Data.SanPhamVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "DetailSP";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>CHI TIẾT SẢN PHẨM</h3>
+<p>
+    <a href="@Url.Action("Index", "QLSanPhamAdmin")" class="btn btn-xs btn-secondary" title="Quay về">
+        <i class="fa fa-arrow-left"></i> Quay về
+    </a>
+    <a href="@Url.Action("EditSP", new { id = Model.SanPhamID })" style="margin-left:20px" class="btn btn-xs btn-warning" title="Quay về">
+        <i class="fa fa-edit"></i> Chỉnh sửa
+    </a>
+    
+</p>
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.SanPhamID)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SanPhamID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TenSanPham)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TenSanPham)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gia)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Gia)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SoLuongTon)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SoLuongTon)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NhaCungCapID)
+                </dt>
+                <dd>
+                    @ViewBag.TenNCC
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.HinhAnh)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.HinhAnh)
+                    <img src="~/Images/Image_Books/@Model.HinhAnh" height="100" />
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MoTa)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MoTa)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+</div>
+
