@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Home page";
+    Layout = null;
+}
+
+<style>
+    .container-slideshow {
+        /*border: 1px solid black;*/
+        width: 100%;
+        height: 15rem;
+        background-color: white;
+    }
+
+    #carouselExample {
+        /*border: 3px solid #cc3300;*/
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .carousel-inner {
+        /*border: 3px solid #00ff00;*/
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .carousel-item {
+        /*border: 3px solid #ff00ff;*/
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 15rem;
+        margin: auto;
+    }
+
+    span {
+        background-color: black;
+        opacity: 70%;
+        border-radius: 50%;
+    }
+</style>
+@* ===============End style-demo================= *@
+
+
+@*====== container =======*@
+<div class="container-slideshow">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+        @* ========= div chua hinh anh ===================== *@
+        <div class="carousel-inner">
+            @* ------ hinh se hien dau tien ---------------- *@
+            <div class="carousel-item active">
+                <img src="~/img/slideshow1.png" class="carousel-img d-block w-10" alt="slide-show-1">
+            </div>
+            @* ---- End hinh se hien dau tien -------------- *@
+
+            @* ------- cac hinh tiep theo ------------------ *@
+            <div class="carousel-item">
+                <img src="~/img/slideshow2.png" class="carousel-img d-block w-100" alt="slide-show-2">
+            </div>
+            @* ---- End cac hinh tiep theo ----------------- *@
+        </div>
+        @* ======= End div chua hinh anh =================== *@
+
+        @* =========== khu vuc chua nut chuyen tiep ======== *@
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        @* ======== End khu vuc chua nut chuyen tiep ======= *@
+    </div>
+</div>
+@*====== End container =======*@
+
+
+

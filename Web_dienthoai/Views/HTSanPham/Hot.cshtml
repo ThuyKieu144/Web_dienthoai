@@ -1,0 +1,130 @@
+﻿
+@model IEnumerable<Web_dienthoai.Models.SanPham>
+
+@{
+    ViewBag.Title = "Hot";
+    Layout = null;
+
+}
+
+<div class="Hot bg-white ">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2 style="color: #DC143C;">Hot</h2>
+        <button class="btn btn-outline-danger btn-sm">Xem thêm >></button>
+    </div>
+    <div class="timer" style="color: #DC143C;">
+        <span>Ending in:</span> <span id="timer">45:52:06</span>
+    </div>
+    <div class="product-list">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4 product">
+                @*<a href="@Url.Action("CT_SPHot", "ChiTiet")">*@
+                <div class="product-card">
+                    <div class="position-relative Image">
+                        <a href="@Url.Action("Details", "HTSanPham", new {@id= item.SanPhamID})" title="xemchitiet">
+                            <img src="~/img/img_sp/@item.HinhAnh" height="180" />
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        @*<h5>@item.TenSanPham</h5>*@
+                        @Html.ActionLink(item.TenSanPham, "Details", "HTSanPham", new { id = item.SanPhamID }, null)
+                        <p class="product-price">@item.Gia @*<span class="product-original-price">33.990.000đ</span></p>*@
+                        @*<p>@item.MoTa</p>*@
+                        @*<p>S-Student giảm thêm đến 600.000đ</p>*@
+                        <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <button class="btn btn-outline-danger btn-sm">Yêu thích</button>
+                        </div>
+                    </div>
+                </div>
+                @*</a>*@
+            </div>
+        }
+
+        @*href="@Url.Action("CT_SPHot", "ChiTiet")"*@
+    </div>
+
+
+</div>
+
+<style>
+    .Hot {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+        background-color: white;
+        cursor: pointer;
+    }
+
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+    .product-list {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .product {
+        background: #fff;
+        color: #000;
+        padding: 10px;
+        margin: 10px;
+        flex: 0 0 auto;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-price {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .product-original-price {
+        text-decoration: line-through;
+        color: #999;
+    }
+
+    .badge-sale {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+
+    .badge-installment {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: blue;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+</style>
+
+
+
+

@@ -1,0 +1,157 @@
+﻿@model List<Web_dienthoai.Models.CartItem>
+@{
+    ViewBag.Title = "Giỏ hàng";
+}
+<h2>Giỏ hàng</h2>
+@if (Model == null || !Model.Any())
+{
+    <p>Giỏ hàng trống. Hãy thêm sản phẩm vào giỏ hàng!</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Giá bán</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr data-id="@item.MaSP">
+                    <td>@item.TenSP</td>
+                    <td><img src="~/img/img_sp/@item.HinhAnh" height="100" /></td>
+                    <td>@item.Gia</td>
+                    <td>
+                        <input type="number" value="@item.Quantity" min="1" class="quantity-input" style="width: 60px;" />
+                    </td>
+                    <td class="item-total">@(item.Gia * item.Quantity) </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm btn-delete" data-id="@item.MaSP">Xóa</button>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="4" style="text-align:right; font-weight:bold;">Tổng tiền:</td>
+                <td id="grand-total" style="font-weight:bold; color:red">@Model.Sum(item => item.Gia * item.Quantity) đ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Thông tin khách hàng</h3>
+    using (Html.BeginForm("Checkout", "Cart", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="TenKhachHang">Tên khách hàng</label>
+            <input type="text" class="form-control" id="TenKhachHang" name="TenKhachHang" required />
+        </div>
+        <div class="form-group">
+            <label for="SoDienThoai">Số điện thoại</label>
+            <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" required pattern="\d{10}" title="Số điện thoại phải gồm 10 số" />
+        </div>
+        <div class="form-group">
+            <label for="DiaChi">Địa chỉ</label>
+            <input type="text" class="form-control" id="DiaChi" name="DiaChi" required />
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:15px">Thanh toán</button>
+    }
+}
+@section Scripts {
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const updateTotal = () => {
+                    let grandTotal = 0;
+                    document.querySelectorAll("tr[data-id]").forEach(row => {
+                        const price = parseFloat(row.querySelector("td:nth-child(3)").textContent);
+                        const quantity = parseInt(row.querySelector(".quantity-input").value);
+                        const itemTotal = price * quantity;
+                        row.querySelector(".item-total").textContent = itemTotal.toLocaleString() + " đ";
+                        grandTotal += itemTotal;
+                    });
+                    document.getElementById("grand-total").textContent = grandTotal.toLocaleString() + " đ";
+                };
+
+                document.querySelectorAll(".quantity-input").forEach(input => {
+                    input.addEventListener("change", function () {
+                        if (this.value < 1) {
+                            this.value = 1; // Ensure the quantity is at least 1
+                        }
+                        updateTotal();
+                    });
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const updateTotal = () => {
+                    let grandTotal = 0;
+                    document.querySelectorAll("tr[data-id]").forEach(row => {
+                        const price = parseFloat(row.querySelector("td:nth-child(3)").textContent);
+                        const quantity = parseInt(row.querySelector(".quantity-input").value);
+                        const itemTotal = price * quantity;
+                        row.querySelector(".item-total").textContent = itemTotal.toLocaleString() + " đ";
+                        grandTotal += itemTotal;
+                    });
+                    document.getElementById("grand-total").textContent = grandTotal.toLocaleString() + " đ";
+                };
+
+                document.querySelectorAll(".quantity-input").forEach(input => {
+                    input.addEventListener("change", function () {
+                        if (this.value < 1) {
+                            this.value = 1; // Ensure the quantity is at least 1
+                        }
+                        const maSP = this.closest("tr").getAttribute("data-id");
+                        const quantity = this.value;
+
+                        // Gọi AJAX để cập nhật số lượng trong giỏ hàng
+                        fetch("@Url.Action("UpdateCart", "Cart")", {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            body: JSON.stringify({ maSP: maSP, quantity: quantity })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                updateTotal();
+                            } else {
+                                alert("Cập nhật giỏ hàng thất bại.");
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                });
+
+                document.querySelectorAll(".btn-delete").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const maSP = this.getAttribute("data-id");
+                        fetch("@Url.Action("RemoveFromCart", "Cart")", {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            body: JSON.stringify({ maSP: maSP })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Xóa hàng khỏi DOM
+                                this.closest("tr").remove();
+                                updateTotal();
+                            } else {
+                                alert("Xóa sản phẩm thất bại.");
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                });
+            });
+    </script>
+}
+
+

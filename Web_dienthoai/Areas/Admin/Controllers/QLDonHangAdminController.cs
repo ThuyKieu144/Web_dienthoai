@@ -118,6 +118,7 @@ namespace Web_dienthoai.Areas.Admin.Controllers
                            select new CTDonHangVM()
                            {
                                MaCTDH = c.CTDonHangID,
+                               DonHangID = c.DonHangID,
                                TenSP = s != null ? s.TenSanPham : "",
                                SoLuong = c.SoLuong,
                                Gia = c.Gia,
@@ -153,13 +154,20 @@ namespace Web_dienthoai.Areas.Admin.Controllers
             return RedirectToAction("Index", "QLDonHangAdmin");
         }
 
-        public ActionResult CancelkDH(int id)
+        public ActionResult CancelDH(int id)
         {
-            var dh = _context.DonHang.Where(x => x.DonHangID == id).FirstOrDefault();
+            var dh = _context.DonHang.FirstOrDefault(x => x.DonHangID == id);
 
+            if (dh == null)
+            {
+                // Handle the case where the order was not found, e.g., return an error view or message
+                return HttpNotFound(); // Hoặc sử dụng một cách xử lý khác như trả về một trang thông báo lỗi
+            }
+
+            // Tiếp tục xử lý khi đơn hàng được tìm thấy
             dh.TrangThaiID = 3;
-
             _context.SaveChanges();
+
             return RedirectToAction("Index", "QLDonHangAdmin");
         }
     }

@@ -1,0 +1,57 @@
+﻿
+
+
+@using Web_dienthoai.Models
+@model IEnumerable<SanPham>
+
+@{
+    ViewBag.Title = "TimKiem";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="ChinhHang">
+    <div class="container-fluid bg-white ">
+
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3" style="margin-top:60px">
+                @Html.Action("Sidebar", "HTSanPham")
+            </div>
+            <div class="col-md-9 ">
+                <h2 class="text-center text-danger" style="margin:20px 20px">Kết quả tìm kiếm</h2>
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 mb-4 ">
+                            <div class="card product-card">
+                                <div class="position-relative Image">
+                                    <a href="@Url.Action("Details", "HTSanPham", new {@id= item.SanPhamID})" title="xemchitiet">
+                                        <img class="card-img-top" src="~/img/img_sp/@item.HinhAnh" />
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    @Html.ActionLink(item.TenSanPham, "Details", "HTSanPham", new { id = item.SanPhamID }, new { @class = "product-name" })
+
+                                    <p class="product-price">@item.Gia VNĐ </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-warning">★★★★★</span>
+                                        </div>
+                                        <button class="btn btn-outline-danger btn-sm">Yêu thích</button>
+                                    </div>
+                                </div>
+                            </div>
+                            @*</a>*@
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+  

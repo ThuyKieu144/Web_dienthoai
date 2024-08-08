@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using Web_dienthoai.Models
+@model SanPham
+
+<h2 style="color:#373f92; margin-top:15px; margin-bottom:15px">THÔNG TIN CHI TIẾT</h2>
+<div class="row">
+    <div class="col-md-4 col-md-4 col-sm-12 col-xs-12">
+        <div>
+            <img src="@Url.Content("~/img/img_sp/"+ Model.HinhAnh)" height="250" />
+        </div>
+        <div style="color:blue;text-align:center; display:flex;justify-items:center; margin-top:15px">
+            <h5>Giá bán: <strong style="color:darkred">@Model.Gia đ</strong></h5>
+        </div>
+        <div>
+            @Html.ActionLink("Thêm vào giỏ", "AddToCart", "Cart", new { maSP = Model.SanPhamID }, new { @class = "btn btn-success" })
+        </div>
+
+    </div>
+    <div class="col-md-8 col-md-8 col-sm-12 col-xs-12">
+        <div><h4><strong>Tên sản phẩm</strong>: @Model.TenSanPham</h4></div>
+        <div><strong>Số lượng còn: @Model.SoLuongTon</strong></div>
+        <div><strong>Mô tả:</strong> @Model.MoTa</div>
+    </div>
+</div>
+
+
+
+

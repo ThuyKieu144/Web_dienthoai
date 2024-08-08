@@ -26,7 +26,20 @@ namespace Web_dienthoai.Areas.Admin.Controllers
                 Session["Role"] = account.Role;
                 Session["Email"] = account.Email;
 
-                return RedirectToAction("Index", "DefaultAdmin", new { area = "Admin" });
+                // Kiểm tra vai trò của tài khoản và chuyển hướng
+                if (account.Role == "Admin")
+                {
+                    return RedirectToAction("Index", "DefaultAdmin", new { area = "Admin" });
+                }
+                else if (account.Role == "User")
+                {
+                    return RedirectToAction("Index", "Home", new { area = "" });
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Vai trò không hợp lệ.";
+                    return View();
+                }
             }
             else
             {

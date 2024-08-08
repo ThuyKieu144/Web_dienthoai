@@ -1,0 +1,132 @@
+﻿
+@using Web_dienthoai.Models
+@model List<SanPham>
+
+@{
+    ViewBag.Title = "Sidebar";
+    Layout = null;
+}
+
+<style>
+    .sidebar {
+        width: 250px; /* Chiều rộng của sidebar */
+        padding: 20px; /* Khoảng cách bên trong */
+        background-color: #f8f9fa; /* Màu nền */
+        border-right: 1px solid #ddd; /* Đường viền bên phải */
+        margin-top: 10px;
+    }
+
+        .sidebar h3 {
+            font-size: 1.2em; /* Kích thước font của tiêu đề */
+            margin-bottom: 10px; /* Khoảng cách dưới của tiêu đề */
+        }
+
+        .sidebar ul {
+            list-style: none; /* Loại bỏ dấu đầu dòng */
+            padding: 0; /* Loại bỏ khoảng cách padding */
+        }
+
+            .sidebar ul li {
+                margin-bottom: 0px; /* Khoảng cách giữa các mục */
+            }
+
+                .sidebar ul li a {
+                    text-decoration: none; /* Loại bỏ gạch chân */
+                    color: #007bff; /* Màu chữ */
+                }
+
+    .filter h4 {
+        font-size: 1em; /* Kích thước font của tiêu đề bộ lọc */
+        margin-top: 20px; /* Khoảng cách trên của tiêu đề bộ lọc */
+        margin-bottom: 10px; /* Khoảng cách dưới của tiêu đề bộ lọc */
+    }
+
+    .filter label {
+        display: block; /* Hiển thị dưới dạng khối */
+        margin-bottom: 5px; /* Khoảng cách dưới của nhãn */
+    }
+
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the text horizontally */
+        text-align: center;
+        padding: 0px 0; /* Add padding for better spacing */
+        background-color: #f8f9fa;
+        border: none; /* Remove the default border */
+    }
+
+        .list-group-item a {
+            color: #000; /* Set text color to black */
+            text-decoration: none; /* Remove underline */
+            width: 100%; /* Make the link cover the entire list item */
+            padding: 10px
+        }
+
+            .list-group-item a:hover {
+                background-color: #e2e6ea; /* Add a hover effect for better UX */
+                color: #000; /* Ensure the text color stays black on hover */
+            }
+
+</style>
+
+<div class="sidebar">
+    <div class="filter">
+        <h4 style="text-align:center">Thương hiệu điện thoại</h4>
+        <ul class="list-group">
+            @if (ViewBag.ThuongHieu != null)
+            {
+                foreach (var item in ViewBag.ThuongHieu)
+                {
+                    <li class="list-group-item">
+                        <a href="@Url.Action("ProductsByBrand", "HTSanPham", new { brandId = item.NhaCungCapID })">
+                            @item.TenNhaCungCap
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    @*<h3>Bộ lọc</h3>*@
+    <div style="display:flex;justify-content:center">
+        @using (Html.BeginForm("ProductsByPrice", "HTSanPham", FormMethod.Get, new { @class = "filter-form", id = "priceFilterForm" }))
+        {
+            <div class="filter">
+                <h4 style="text-align:center">Giá bán</h4>
+                <label>
+                    <input type="checkbox" name="priceRange" value="0-10000"
+                           @(ViewBag.SelectedPriceRange != null && ((string[])ViewBag.SelectedPriceRange).Contains("0-10000") ? "checked" : "")
+                           onchange="submitForm()" />
+                    Dưới 10 triệu
+                </label>
+                <label>
+                    <input type="checkbox" name="priceRange" value="10000-15000"
+                           @(ViewBag.SelectedPriceRange != null && ((string[])ViewBag.SelectedPriceRange).Contains("10000-15000") ? "checked" : "")
+                           onchange="submitForm()" />
+                    Từ 10 đến 15 triệu
+                </label>
+                <label>
+                    <input type="checkbox" name="priceRange" value="15000-20000"
+                           @(ViewBag.SelectedPriceRange != null && ((string[])ViewBag.SelectedPriceRange).Contains("15000-20000") ? "checked" : "")
+                           onchange="submitForm()" />
+                    Từ 15 đến 20 triệu
+                </label>
+                <label>
+                    <input type="checkbox" name="priceRange" value="20000-"
+                           @(ViewBag.SelectedPriceRange != null && ((string[])ViewBag.SelectedPriceRange).Contains("20000-") ? "checked" : "")
+                           onchange="submitForm()" />
+                    Trên 20 triệu
+                </label>
+            </div>
+        }
+    </div>
+</div>
+    <script>
+        function submitForm() {
+            document.getElementById("priceFilterForm").submit();
+        }
+    </script>
+
+
+
+

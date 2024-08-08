@@ -12,6 +12,7 @@ namespace Web_dienthoai.Areas.Admin.Data
     {
         [Display(Name = "#")]
         public int MaCTDH { get; set; }
+        public int? DonHangID { get; set; }
 
         [DisplayName("Tên sản phẩm")]
         public string TenSP {  get; set; }

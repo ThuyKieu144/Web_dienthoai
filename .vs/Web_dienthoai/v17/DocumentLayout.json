@@ -1,0 +1,461 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MVC\\Web_dienthoai\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\controllers\\qlsanphamadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\controllers\\qlsanphamadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|d:\\mvc\\web_dienthoai\\web_dienthoai\\areas\\admin\\data\\accountvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\data\\accountvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|d:\\mvc\\web_dienthoai\\web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\editsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\editsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\controllers\\htsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\controllers\\htsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\controllers\\qldonhangadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\controllers\\qldonhangadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\slideshow\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\slideshow\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\views\\qldonhangadmin\\detaildh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\qldonhangadmin\\detaildh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\data\\ctdonhangvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\data\\ctdonhangvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\models\\ctdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\models\\ctdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\htsanpham\\productsbyprice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\htsanpham\\productsbyprice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\sanpham\\timkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\sanpham\\timkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\htsanpham\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\htsanpham\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\htsanpham\\goiy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\htsanpham\\goiy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\htsanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\htsanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\addsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\addsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\deletesp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\areas\\admin\\views\\qlsanphamadmin\\deletesp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\cart\\thankyou.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\cart\\thankyou.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|D:\\MVC\\Web_dienthoai\\web_dienthoai\\views\\htsanpham\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{70C3D37E-1F6F-484A-BB04-E1BE71CB121E}|Web_dienthoai\\Web_dienthoai.csproj|solutionrelative:web_dienthoai\\views\\htsanpham\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 546,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HTSanPhamController.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\HTSanPhamController.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Controllers\\HTSanPhamController.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\HTSanPhamController.cs",
+              "RelativeToolTip": "Web_dienthoai\\Controllers\\HTSanPhamController.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwHMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T10:16:29.926Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountVM.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Data\\AccountVM.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Data\\AccountVM.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Data\\AccountVM.cs",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Data\\AccountVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:08:09.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QLSanPhamAdminController.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Controllers\\QLSanPhamAdminController.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Controllers\\QLSanPhamAdminController.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Controllers\\QLSanPhamAdminController.cs",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Controllers\\QLSanPhamAdminController.cs",
+              "ViewState": "AQIAAHwAAAAA8AEAAADsv4cAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T16:55:15.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Models\\CartItem.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\CartItem.cs",
+              "RelativeToolTip": "Web_dienthoai\\Models\\CartItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:29:45.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Web_dienthoai\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAJMAAADAy8zMzMwqwKcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:31:45.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\Account\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\Account\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\Account\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\Account\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T15:26:05.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AQIAAIIAAACAMjMzM/MmwJwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T19:34:31.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditSP.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\EditSP.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\EditSP.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\EditSP.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\EditSP.cshtml",
+              "ViewState": "AQIAABsAAADAPDMzM3MvwCYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T01:30:27.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFMAAAAAmJmZmZkuwGcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:00:29.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "QLDonHangAdminController.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Controllers\\QLDonHangAdminController.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Controllers\\QLDonHangAdminController.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Controllers\\QLDonHangAdminController.cs",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Controllers\\QLDonHangAdminController.cs",
+              "ViewState": "AQIAAJwAAADg18zMzAwqwJQAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T02:36:25.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\SlideShow\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\SlideShow\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\SlideShow\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\SlideShow\\Index.cshtml",
+              "ViewState": "AQIAAD8AAAAAUDMzMzPrvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T15:53:01.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CTDonHangVM.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Data\\CTDonHangVM.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Data\\CTDonHangVM.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Data\\CTDonHangVM.cs",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Data\\CTDonHangVM.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAIB3PQ4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:45:22.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetailDH.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLDonHangAdmin\\DetailDH.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\QLDonHangAdmin\\DetailDH.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLDonHangAdmin\\DetailDH.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\QLDonHangAdmin\\DetailDH.cshtml",
+              "ViewState": "AQIAADcAAACAZWZmZmYkwEsAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T12:40:06.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CTDonHang.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\CTDonHang.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Models\\CTDonHang.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\CTDonHang.cs",
+              "RelativeToolTip": "Web_dienthoai\\Models\\CTDonHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T12:45:46.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductsByPrice.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\ProductsByPrice.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\HTSanPham\\ProductsByPrice.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\ProductsByPrice.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\HTSanPham\\ProductsByPrice.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T10:26:41.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T09:03:47.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TimKiem.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\SanPham\\TimKiem.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\SanPham\\TimKiem.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\SanPham\\TimKiem.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\SanPham\\TimKiem.cshtml",
+              "ViewState": "AQIAAAsAAAAQOTMzMzMmwBIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T20:23:20.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Sidebar.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\HTSanPham\\Sidebar.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Sidebar.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\HTSanPham\\Sidebar.cshtml",
+              "ViewState": "AQIAAG0AAABAJzMzM7MTwHoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T09:00:41.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Controllers\\SanPhamController.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "Web_dienthoai\\Controllers\\SanPhamController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T19:55:56.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Models\\SanPham.cs",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Models\\SanPham.cs",
+              "RelativeToolTip": "Web_dienthoai\\Models\\SanPham.cs",
+              "ViewState": "AQIAABEAAABA//////84wCAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T11:37:21.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Goiy.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Goiy.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\HTSanPham\\Goiy.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Goiy.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\HTSanPham\\Goiy.cshtml",
+              "ViewState": "AQIAAAcAAADwMTMzMzMrwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T10:52:46.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\HTSanPham\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\HTSanPham\\Index.cshtml",
+              "ViewState": "AQIAADUAAAAA7P////8AwEMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T08:47:22.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\Index.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\Index.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\Index.cshtml",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAYwFUAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T01:06:18.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddSP.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\AddSP.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\AddSP.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\AddSP.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\AddSP.cshtml",
+              "ViewState": "AQIAABUAAAAAZGZmZmYkwDIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T01:17:09.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DeleteSP.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\DeleteSP.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\DeleteSP.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\DeleteSP.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Areas\\Admin\\Views\\QLSanPhamAdmin\\DeleteSP.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T01:29:06.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ThankYou.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Cart\\ThankYou.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\Cart\\ThankYou.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\Cart\\ThankYou.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\Cart\\ThankYou.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T19:39:34.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Details.cshtml",
+              "RelativeDocumentMoniker": "Web_dienthoai\\Views\\HTSanPham\\Details.cshtml",
+              "ToolTip": "D:\\MVC\\Web_dienthoai\\Web_dienthoai\\Views\\HTSanPham\\Details.cshtml",
+              "RelativeToolTip": "Web_dienthoai\\Views\\HTSanPham\\Details.cshtml",
+              "ViewState": "AQIAAAYAAADAZGZmZmYkwBAAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T19:33:05.661Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

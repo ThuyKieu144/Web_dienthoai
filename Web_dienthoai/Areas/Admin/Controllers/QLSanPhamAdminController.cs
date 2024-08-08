@@ -131,19 +131,19 @@ namespace Web_dienthoai.Areas.Admin.Controllers
                     //get filename
                     var fileName = System.IO.Path.GetFileName(fileUpload.FileName);
                     //get path
-                    var path = Path.Combine(Server.MapPath("~/Images/Image_Books/"), fileName);
+                    var path = Path.Combine(Server.MapPath("~/img/img_sp/"), fileName);
 
-                    //ktra image exist
-                    if (System.IO.File.Exists(path))
-                    {
-                        ViewBag.mesage = "Ảnh này đã tồn tại!";
-                    }
-                    else
-                    {
+                    ////ktra image exist
+                    //if (System.IO.File.Exists(path))
+                    //{
+                    //    ViewBag.mesage = "Ảnh này đã tồn tại!";
+                    //}
+                    //else
+                    //{
                         fileUpload.SaveAs(path);
                         //lưu file name vào DB ảnh bìa
                         item.HinhAnh = fileName;
-                    }
+                    //}
                 }
 
                 _context.SanPham.Add(item);
@@ -233,14 +233,14 @@ namespace Web_dienthoai.Areas.Admin.Controllers
                     // Get filename
                     var fileName = System.IO.Path.GetFileName(fileUpload.FileName);
                     // Get path
-                    var path = Path.Combine(Server.MapPath("~/Images/Image_Books/"), fileName);
+                    var path = Path.Combine(Server.MapPath("~/img/img_sp/"), fileName);
 
 
 
                     // Check if old image exists and delete it
                     if (!string.IsNullOrEmpty(item.HinhAnh))
                     {
-                        var oldImagePath = Path.Combine(Server.MapPath("~/Images/Image_Books/"), item.HinhAnh);
+                        var oldImagePath = Path.Combine(Server.MapPath("~/img/img_sp/"), item.HinhAnh);
                         if (System.IO.File.Exists(oldImagePath))
                         {
                             System.IO.File.Delete(oldImagePath);

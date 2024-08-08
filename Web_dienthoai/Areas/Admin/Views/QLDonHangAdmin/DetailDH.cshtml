@@ -43,7 +43,7 @@
                     <td>@counter</td>
                     @*<td>@Html.DisplayFor(modelItem => item.MaCTDH)</td>*@
                     <td>@Html.DisplayFor(modelItem => item.TenSP)</td>
-                    <td><img src="~/Images/Image_Books/@item.HinhAnh" height="100" /></td>
+                    <td><img src="~/img/img_sp/@item.HinhAnh" height="100" /></td>
                     <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
                     <td>@Html.DisplayFor(modelItem => item.Gia)</td>
                     <td>@Html.DisplayFor(modelItem => item.TongTien)</td>
@@ -70,10 +70,10 @@ else
 @if (trangThaiID == 1)
 {
     <div class="form-group text-center d-flex justify-content-center" style="margin-top:30px">
-        <a href="@Url.Action("CheckDH", "QLDonHangAdmin", new { id = Model.First().MaCTDH })" style="margin-left:20px" class="btn btn-xs btn-success" title="Đã giao">
+        <a href="@Url.Action("CheckDH", "QLDonHangAdmin", new { id = Model.First().DonHangID })" style="margin-left:20px" class="btn btn-xs btn-success" title="Đã giao">
             <i class="fa fa-check"></i> Đã giao
         </a>
-        <a href="@Url.Action("CancelDH", "QLDonHangAdmin", new { id = Model.First().MaCTDH })" style="margin-left:20px" class="btn btn-xs btn-danger" title="Hủy">
+        <a href="@Url.Action("CancelDH", "QLDonHangAdmin", new { id = Model.First().DonHangID })" style="margin-left:20px" class="btn btn-xs btn-danger" title="Hủy">
             <i class="fa fa-times"></i> Hủy
         </a>
     </div>

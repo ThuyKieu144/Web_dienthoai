@@ -61,7 +61,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.HinhAnh, htmlAttributes: new { @class = "control-label col-md-6" })
                     <div class="col-md-12">
-                        <img src="~/Images/Image_Books/@Model.HinhAnh" height="100" />
+                        <img src="~/img/img_sp/@Model.HinhAnh" height="100" />
                         @* Trường input file để tải lên ảnh mới *@
                         <input type="file" name="fileUpload" value="File" class="form-control" />
                         @Html.HiddenFor(model => model.HinhAnh)

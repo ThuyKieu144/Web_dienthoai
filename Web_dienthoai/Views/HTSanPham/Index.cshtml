@@ -1,0 +1,84 @@
+﻿@using Web_dienthoai.Models
+@model IEnumerable<SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+
+
+<body>
+    <style>
+        .main {
+            width: auto;
+            /*padding: 20px;*/
+            /*background-color: #f8f9fa;*/
+            border-right: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        .ctn {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .Hot {
+            margin-top: 10px;
+        }
+
+        .Goiy {
+            margin-top: 10px;
+        }
+
+        .ChinhHang {
+            margin-top: 10px;
+        }
+    </style>
+    <div class="container-fluid bg-white ">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                @Html.Action("Sidebar", "HTSanPham")
+            </div>
+            <!-- Main Content Area -->
+            <div class="col-md-9 main">
+                <div class="container-fluid w-140 ctn">
+                    <div class="Sale bg-white">
+                        @Html.Action("Sale", "HTSanPham")
+                    </div>
+
+                    @*<div class="Hot bg-white">
+                        @Html.Action("Hot", "HTSanPham")
+
+                    </div>*@
+
+                    <div class="Goiy bg-white">
+                        @Html.Action("Goiy", "HTSanPham")
+
+                    </div>
+
+                    @*<div class="ChinhHang bg-white">
+                        @Html.Action("ChinhHang", "HTSanPham")
+
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

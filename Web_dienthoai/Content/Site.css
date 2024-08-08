@@ -1,4 +1,5 @@
-﻿/* Set padding to keep content from hitting the edges */
+﻿
+/* Set padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
@@ -18,3 +19,166 @@ select,
 textarea {
     max-width: 280px;
 }
+
+nav {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: #e8e8e8;
+}
+
+/*------------------------nav-------------------------*/
+.container {
+    /*border: 2px solid #ccc;*/
+    width: 100%;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.search-bar {
+    flex: 1;
+    position: relative;
+}
+
+.itemform {
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin-top: 3px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+}
+
+.search-bar button {
+    position: absolute;
+    top: 50%;
+    right: 00px;
+    transform: translateY(-45%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.item-ul {
+    width: 100%;
+    margin: auto;
+    list-style-type: none;
+    padding: auto;
+}
+
+.ul-nav {
+    /*flex-direction: row;*/
+    justify-content: end;
+    /*border: 2px solid crimson;*/
+}
+/*------------------------end nav-------------------------*/
+
+
+.products-by-brand {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between the product cards */
+}
+
+
+.product-info {
+    padding: 15px;
+}
+
+.product-price {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+    .product-name:hover {
+        text-decoration: underline;
+        color: #DC143C;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .product-card {
+        flex: 1 1 calc(50% - 15px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .product-card {
+        flex: 1 1 100%; /* 1 item per row on very small screens */
+    }
+}
+
+/* Ensure the container and rows are set up correctly */
+.container-fluid {
+    padding: 0 15px;
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.col-md-4 {
+    padding: 0 15px;
+}
+
+/* Product card styling */
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    background-color: white;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 15px); /* 3 items per row with space between */
+    box-sizing: border-box;
+    padding: 5px 5px
+}
+
+    .product-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+        width:180px;
+        height: 180px;
+        margin-top:10px;
+        margin-bottom:15px
+    }
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .col-md-4 {
+        flex: 0 0 50%; /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .col-md-4 {
+        flex: 0 0 100%; /* 1 item per row on very small screens */
+    }
+}
+
